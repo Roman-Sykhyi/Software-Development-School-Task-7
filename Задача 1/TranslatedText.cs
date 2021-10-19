@@ -48,8 +48,15 @@ namespace Задача_1
 
         private string GetTranslation(string word)
         {
-            Console.Write("Enter translation for " + word + ": ");
-            return Console.ReadLine();
+            string translation;
+
+            do
+            {
+                Console.Write("Enter translation for " + word + ": ");
+                translation = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(translation));
+
+            return translation;
         }
     }
 }
